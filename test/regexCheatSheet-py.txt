@@ -1,0 +1,61 @@
+REGEX BASICS
+------------
+.    | any character except newline 
+a    | the character 'a'
+ab   | the string 'ab'
+a|b  | 'a' or 'b'
+a*   | 0 or more 'a's 
+\    | escapes a special character
+
+REGEX QUANTIFIERS
+-----------------
+*    | 0 or more
++    | 1 or more
+?    | 0 or 1
+{2}  | exactly 2
+{2,5}| between 2 and 5
+{2,} | 2 or more
+{,5} | up to 5
+
+REGEX CHARACTER CLASSES
+-----------------------
+[ab-d]   | one character of: a, b, c, d
+[^ab-d]  | one character except: a,b,c,d
+[\b]     | backspace character
+\d       | one digit
+\D       | one non-digit
+\s       | one whitespace
+\S       | one non-whitespace
+\w       | one word character
+\W       | one non-word character
+
+REGEX FLAGS
+-----------
+i   | ignore case
+m   | ^ and $ match start and end of line
+s   | . matches newline as well
+x   | allow spaces and comments
+l   | locale character classes
+u   | unicode character classes
+
+REGEX ASSERTIONS
+----------------
+^        | start of string
+\A       | start of string, ignore m flag
+$        | end of string
+\Z       | end of string, ignore m flag
+\b       | word boundary
+\B       | non-word boundry
+(?=...)  | positive lookahead 
+(?!...)  | negative lookahead
+(?<=...) | positive lookbehind
+(?<!...) | negative lookbehind
+(?()|)   | conditional
+
+REGEX SPECIAL CHARACTERS
+------------------------
+\n   | newline
+\r   | carriage return
+\t   | tab
+\YYY | octal character YYY
+\xYY | hexadecimal character YY
